@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    liff.init({ liffId: 'YOUR_LIFF_ID' })
+    liff.init({ liffId: '2008146378-KP8y1pea' })
         .then(() => {
             // 從 LIFF 的 URL 參數中獲取任務資訊
             const urlParams = new URLSearchParams(window.location.search);
