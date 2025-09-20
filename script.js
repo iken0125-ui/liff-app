@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    liff.init({ liffId: '2008146378-KP8y1pea' })
+    liff.init({ liffId: '2008146558-1W8lLBL6' })
         .then(() => {
             if (!liff.isLoggedIn()) {
-                // 如果用戶未登入，引導登入
                 liff.login();
             } else {
-                // 從 LIFF 的 URL 參數中獲取任務資訊
                 const urlParams = new URLSearchParams(window.location.search);
                 const task = urlParams.get('task');
 
@@ -26,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                 liff.closeWindow();
                             })
                             .catch((err) => {
-                                // 將錯誤訊息傳送給用戶
                                 const errorMessage = `回報失敗，請將以下訊息告知管理者：\n${err.message}`;
                                 liff.sendMessages([{ type: 'text', text: errorMessage }]);
                             });
