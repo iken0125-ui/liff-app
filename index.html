@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>回報包裹數量</title>
-    <script src="https://static.line-scdn.net/liff/2.2.4/sdk.js"></script>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            text-align: center;
-            width: 90%;
-            max-width: 400px;
-        }
-        h2 {
-            color: #333;
-            margin-bottom: 25px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        #quantityInput {
-            width: calc(100% - 20px);
-            padding: 15px;
-            margin-bottom: 25px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            font-size: 20px;
-            text-align: center;
-            color: #555;
-            transition: border-color 0.3s ease;
-        }
-        #quantityInput:focus {
-            border-color: #00b900;
-            outline: none;
-        }
-        #reportButton {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            background-color: #00b900;
-            color: #fff;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        #reportButton:active {
-            background-color: #008f00;
-            transform: scale(0.98);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回報包裹數量</title>
+    <script src="https://static.line-scdn.net/liff/2.2.4/sdk.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px; /* 增加內邊距 */
+            border-radius: 12px; /* 圓角更柔和 */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 陰影更明顯 */
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 25px; /* 增加底部間距 */
+            font-size: 24px; /* 字體加大 */
+            font-weight: bold;
+        }
+        #quantityInput {
+            width: calc(100% - 20px);
+            padding: 15px; /* 增加內邊距 */
+            margin-bottom: 25px;
+            border: 2px solid #ccc; /* 邊框更粗 */
+            border-radius: 8px;
+            font-size: 20px; /* 字體加大 */
+            text-align: center;
+            color: #555;
+            transition: border-color 0.3s ease; /* 增加過渡效果 */
+        }
+        #quantityInput:focus {
+            border-color: #00b900; /* 輸入時變色 */
+            outline: none;
+        }
+        #reportButton {
+            width: 100%;
+            padding: 15px; /* 增加內邊距 */
+            border: none;
+            border-radius: 8px;
+            background-color: #00b900; /* LINE 綠色 */
+            color: #fff;
+            font-size: 20px; /* 字體加大 */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* 增加過渡效果 */
+        }
+        #reportButton:active {
+            background-color: #008f00; /* 按下時變深 */
+            transform: scale(0.98); /* 按下時縮小 */
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h2 id="taskName"></h2>
-        <input type="number" id="quantityInput" placeholder="請輸入數量">
-        <button id="reportButton">回報數量</button>
-    </div>
+    <div class="container">
+        <h2 id="taskName"></h2>
+        <input type="number" id="quantityInput" placeholder="請輸入數量">
+        <button id="reportButton">回報數量</button>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
